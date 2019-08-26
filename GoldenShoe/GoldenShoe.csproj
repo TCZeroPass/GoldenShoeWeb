@@ -260,6 +260,9 @@
     <Content Include="Views\Pages\Complaints.cshtml" />
     <Content Include="Views\Pages\About.cshtml" />
     <Content Include="Views\Pages\Contact.cshtml" />
+    <Content Include="Views\Shared\_LayoutUser.cshtml" />
+    <Content Include="Views\Pages\UserView.cshtml" />
+    <Content Include="Views\Pages\LoginPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

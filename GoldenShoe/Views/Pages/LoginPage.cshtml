@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "UserView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LoginPage</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class=" ml-auto mr-auto ">
+            <div class="col-lg-8 col-md-9  ml-auto mr-auto justify-content-center">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="bg-light">
+                            <td colspan="2">
+                                Login to an account
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><label for="username">Username</label></td>
+                            <td>
+                                <input class="form-control" type="text" name="username" id="txtUsername" placeholder="username" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="password">Password</label></td>
+                            <td>
+                                <input class="form-control" type="password" name="password" id="txtPassword" placeholder="password" />
+                            </td>
+                        </tr>
+                        <tr class="bg-light">
+                            <td colspan="2">
+                                <input type="button" id="btnLogin" class="btn btn-outline-dark" value="Login" onclick="location.href ='@Url.Action("UserView", "Pages" , new { })' " />
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

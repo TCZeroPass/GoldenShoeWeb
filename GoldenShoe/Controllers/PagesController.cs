@@ -40,5 +40,17 @@ namespace GoldenShoe.Controllers
             ViewBag.Title = "About Page";
             return View();
         }
+
+        public ActionResult LoginPage()
+        {
+            ViewBag.Title = "Login Page";
+            return View();
+        }
+
+        public ActionResult UserView()
+        {
+            ViewBag.Title = "User Page";
+            return View();
+        }
     }
 }

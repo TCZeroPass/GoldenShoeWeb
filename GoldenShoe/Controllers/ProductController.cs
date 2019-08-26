@@ -14,11 +14,10 @@ namespace GoldenShoe.Controllers
 
         public ProductController()
         {
-           
 
-            shoe.Add(new Product { productID = 1, productName= "Shoe Pink Large", productDescription=" escription various data", amountInStore = 50, starRating = 5 });
-            shoe.Add(new Product { productID = 2, productName ="Shoe Blue Medium", productDescription = " description various data", amountInStore = 36, starRating = 4 });
-            shoe.Add(new Product { productID = 3, productName ="Shoe Red Small", productDescription = " description various data", amountInStore = 150, starRating = 3 });
+            shoe.Add(new Product { productID = 1, productName= "Shoe Pink Large", productDescription=" escription various data", amountInStore = 50, starRating = 5, sizeAvailable = new Dictionary<string, int> { {"7",15 }, {"8,5", 5 }, {"6", 35 } } });
+            shoe.Add(new Product { productID = 2, productName ="Shoe Blue Medium", productDescription = " description various data", amountInStore = 36, starRating = 4, sizeAvailable = new Dictionary<string, int> { { "6,5", 15 }, { "12", 18 }, { "8", 23 } } });
+            shoe.Add(new Product { productID = 3, productName ="Shoe Red Small", productDescription = " description various data", amountInStore = 150, starRating = 3, sizeAvailable = new Dictionary<string, int> { { "5", 0 }, { "4", 2 }, { "9", 11 } } });
         }
 
 
@@ -37,8 +36,9 @@ namespace GoldenShoe.Controllers
         }
 
         // POST: api/Product
-        public void Post([FromBody]string value)
+        public void Post(Product addingShoe)
         {
+            shoe.Add(addingShoe);
         }
 
         // PUT: api/Product/5
