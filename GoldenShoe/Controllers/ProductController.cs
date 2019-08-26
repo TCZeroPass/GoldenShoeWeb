@@ -24,10 +24,14 @@ namespace GoldenShoe.Controllers
 
 
         // GET: api/Product
+        [HttpGet]
         public List<Product> Get()
         {
             return shoe;
         }
+
+
+
 
         // GET: api/Product/5
         public Product Get(int id)
