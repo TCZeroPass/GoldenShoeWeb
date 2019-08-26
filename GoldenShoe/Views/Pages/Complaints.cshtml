@@ -6,12 +6,11 @@
 
 <h2>Complaint Form</h2>
 
-<form action="" class="formComplaint needs-validation" novalidate>
+<form id="formComplaint" action="/api/complaint" method="post" class="formComplaint needs-validation" novalidate>
 
     <div class="form-group">
         <label for="productSelect">Select the item</label>
         <select name="productSelect" id="productSelection" class="form-control" required>
-            <option value=""></option>
         </select>
         <div class="invalid-feedback"> please select one of the items </div>
         <div class="valid-feedback">  </div>
@@ -20,11 +19,10 @@
     <div class="form-group">
         <label for="reasonSelect">Reason why you returning the item</label>
         <select name="reasonSelect" id="reasonSelection" class="form-control" required>
-            <option value=""></option>
-            <option value="reason1"> Incorrent size</option>
-            <option value="reason2"> Don`t like the colour</option>
-            <option value="reason3"> Don`t like the style</option>
-            <option value="reason4"> Other</option>
+            <option value="1"> Incorrent size</option>
+            <option value="2"> Don`t like the colour</option>
+            <option value="3"> Don`t like the style</option>
+            <option value="4"> Other</option>
         </select>
         <div class="invalid-feedback"> please select one of the items </div>
         <div class="valid-feedback">  </div>
@@ -39,43 +37,6 @@
 </form>
 
 @section scripts {
-    <script>
-
-        $(document).ready(function () {
-            var products = $('#productSelection');
-
-            $.ajax({
-                type: "GET",
-                url: "http://localhost:59848/Api/Product",
-                contentType: "application/json;charset=utf-8",
-                dataType: "json",
-                data: {},
-                success: function (data) {
-                       // alert(JSON.stringify(data));
-                    products.empty();
-                    $('#productSelection').append($('<option/>').val("").html(""));                                  //empty first one
-                    $.each(data, function (index, item) {
-                        $('#productSelection').append($('<option/>').val(item.productID).html(item.productName));
-                        });
-                },
-                failure: function () {
-                    alert("Error");
-                }
-            });
-            
-        });
-
-
-
-        var form = document.querySelector('.needs-validation');
-
-        form.addEventListener('submit', function (event) {
-            if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-        })
-    </script>
+<script src="~/Scripts/formScripts.js"></script>
 }
 
