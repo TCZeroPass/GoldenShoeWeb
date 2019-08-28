@@ -29,9 +29,9 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">Products</a>
                         <div class="dropdown-menu">
                             <ul>
-                                <li class="dropdown-item">@Html.ActionLink("Men`s shoes", "Index", "Home", new { area = "" }, null)</li>
-                                <li class="dropdown-item">@Html.ActionLink("Women`s shoes", "Index", "Home", new { area = "" }, null)</li>
-                                <li class="dropdown-item">@Html.ActionLink("Children shoes", "Index", "Home", new { area = "" }, null)</li>
+                                <li class="dropdown-item">@Html.ActionLink("Men`s shoes", "MensShoes", "Home", new { area = "" }, null)</li>
+                                <li class="dropdown-item">@Html.ActionLink("Women`s shoes", "WomensShoes", "Home", new { area = "" }, null)</li>
+                                <li class="dropdown-item">@Html.ActionLink("Children shoes", "ChildrenShoes", "Home", new { area = "" }, null)</li>
                             </ul>
                         </div>
                     </li>
@@ -66,60 +66,13 @@
         <hr />
 
 
-
-        <footer id="sticky-footer" class="footer-bottom py-4 bg-dark text-white-50">
-            <div class="footer" id="footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <h4> Golden Shoe </h4>
-                            <a class="navbar-brand" href="@Url.Action("Index", "Home", new { area = "" })"><img src="~/Pics/logo.jpg" height="100" /></a>
-                        </div>
-                        <div class="col-lg-3 col-sm-2 col-xs-3">
-                            <h3> Contact </h3>
-                            <ul>
-                                <li><a class="email" href="#"> Customer support </a></li>
-                                <br/>
-                                <li> <p> Street 5 </p> </li>
-                                <li> <p> London </p> </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 col-sm-2 col-xs-3">
-                            <ul>
-                                <li> <h5> <a href="#" style="margin-top: 5em"> ABOUT US</a> </h5></li>
-                                <li> <h5><a href="#"> CURRENT SERIES </a> </h5></li>
-                                <li> <h5><a href="#"> THE HOUSE </a> </h5></li>
-                                <li> <h5><a href="#"> LOOKING BACK </a> </h5></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div>
-                    <div class="container ml-1">
-                        <small>Copyright &copy; @DateTime.Now.Year - GoldenShoe  </small>
-                    </div>
-                </div>
-
-            
-        </footer>
-
-
-
-
-
-
-
-
-
-
-        @*<footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+        <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
 
                     <div class="container text-center">
                         <small>Copyright &copy; @DateTime.Now.Year - GoldenShoe  </small>
                     </div>
 
-        </footer>*@
+        </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

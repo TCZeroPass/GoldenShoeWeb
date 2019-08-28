@@ -1,0 +1,58 @@
+﻿@model IEnumerable<GoldenShoe.Models.ProductModel>
+
+@{
+    ViewBag.Title = "ChildrensShoes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ChildrensShoes</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.productID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.productName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.productDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.amountInStore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.starRating)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.productID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.productName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.productDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.amountInStore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.starRating)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

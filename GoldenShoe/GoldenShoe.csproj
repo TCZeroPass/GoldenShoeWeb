@@ -266,6 +266,9 @@
     <Content Include="Views\Shared\_LayoutUser.cshtml" />
     <Content Include="Views\Pages\UserView.cshtml" />
     <Content Include="Views\Pages\LoginPage.cshtml" />
+    <Content Include="Views\Home\MensShoes.cshtml" />
+    <Content Include="Views\Home\ChildrenShoes.cshtml" />
+    <Content Include="Views\Home\WomensShoes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
