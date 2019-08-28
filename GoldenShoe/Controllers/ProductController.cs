@@ -48,6 +48,13 @@ namespace GoldenShoe.Controllers
 
         }
 
+        //public string getShoeName(int number)
+        //{
+        //    var shoeName = shoe.Where(i => i.productID == number);
+            
+        //    return shoeName.ToString();
+        //}
+
         // PUT: api/Product/5
         //public void Put(int id, [FromBody]string value)
         //{

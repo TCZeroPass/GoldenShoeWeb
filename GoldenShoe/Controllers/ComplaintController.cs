@@ -39,7 +39,6 @@ namespace GoldenShoe.Controllers
             string productID = complaint.productSelect;
             string reasonID = complaint.reasonSelect;
             string description = complaint.description;
-            string reasonText;
 
             switch (Int32.Parse(reasonID))
             {
@@ -59,9 +58,13 @@ namespace GoldenShoe.Controllers
                     break;
             }
 
+           
+
             complaint.complainID = complaintNumberGenerated.ToString();
 
-            using (StreamWriter writer = File.AppendText(HostingEnvironment.MapPath("~/App_Data/complains.txt")))
+            complaints.Add(complaint);
+
+            using (StreamWriter writer = File.AppendText(HostingEnvironment.MapPath("~/App_Data/complaints.txt")))                    //file in app_data in bin..not in iis server folder when not deployed
             {
                 writer.WriteLine(JsonConvert.SerializeObject(complaint));
             }
